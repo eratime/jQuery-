@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0; font-family: "Arial", "微软雅黑"; line-height: 25px; font-size: 14px;}
+section{margin: 5px auto 0 auto; width: 300px; padding: 5px; background:#f8dda9; border: 1px #b57b0b solid; border-radius: 5px; position: relative;}
+.img{position: absolute; right: -18px; bottom: -75px;}
+span{float: right;
+    cursor: pointer;}
+h1{font-size: 16px; cursor: pointer;}
+section li{list-style: none;}
+section li:before{content:" • ";}

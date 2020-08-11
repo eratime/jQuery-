@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+$(function(){
+	var x=$("#div_1").html();	//（）里没有内容的时候，获取所以内容包括标签
+	var y=$("#div_1").text();	//()里没有内容的时候，获取文本，不包括标签
+	alert(x);
+	$("#div_2").html("<b>技</b>术");		//()里有内容的时候，表示设置，所以内容都可以添加，包括标签
+	$("#div_3").text("<i>adc</i>");		//()
+	
+	});
+</script>
+</head>
+
+<body>
+<div id="div_1">网络技术</div>
+<div id="div_2"></div>
+<div id="div_3"></div>
+</body>
+</html>

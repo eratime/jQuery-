@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>当当—网上购物中心</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+$(function(){
+	//一定高度，固定导航
+	$(window).scroll(function () {
+		var pos = $(window).scrollTop();
+
+		if (pos > 378) {
+			$(".nav_box").addClass("nav-fixed");
+		}else{
+			$(".nav_box").removeClass("nav-fixed");
+		}
+	});
+	
+	//鼠标经过显示返回顶部的字
+	$(".zhiding span").hover(
+		function(){
+			$(this).siblings().show();
+		},
+		function(){
+			$(this).siblings().hide();	
+		});
+		
+	//一定高度出现返回置顶按钮
+	$(window).scroll(function () {
+		var pos2 = $(window).scrollTop();
+
+		if (pos2 > 600) {
+			$(".zhiding").show();
+		}else{
+			$(".zhiding").hide();
+		}
+	});	
+	//点击，返回顶部
+	$(".zhiding span").click(
+		function(){
+			$("html,body").animate({scrollTop:0},500);	
+		})
+	
+	
+});
+
+</script>
+</head>
+
+<body>
+<div class="zhiding"><span></span><p>返回顶部</p></div>
+
+<div class="top"></div>
+
+<div class="nav_box">
+	<div class="nav">
+		<ul>
+    		<div>全部商品分类<span>﹀</span></div>
+    		<li><a href="#">19周年</a></li>
+        	<li><a href="#">图书</a></li>
+        	<li><a href="#">电子书</a></li>
+        	<li><a href="#">网络文字</a></li>
+        	<li><a href="#">服装</a></li>
+        	<li><a href="#">运动户外</a></li>
+        	<li><a href="#">孕婴童</a></li>
+        	<li><a href="#">家居</a></li>
+        	<li><a href="#">创意文具</a></li>
+        	<li><a href="#">食品</a></li>
+        	<li><a href="#">Apple</a></li>
+        	<li><a href="#">电器城</a></li>
+    	</ul>	
+	</div>
+</div>
+
+<div class="nr"></div>
+
+
+</body>
+</html>

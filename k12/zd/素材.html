@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>全选效果</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+	font-size:14px;
+	font-family:"微软雅黑";
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+a:hover{
+	color:red;
+}
+ul{
+	list-style:none;
+}
+.fl{
+	float:left;
+}
+.wp{
+	width:1110px;
+	margin:50px auto 20px;
+}
+.storyName{
+	height:20px;
+	line-height:20px;
+}
+.logo_1{
+	background:url(images/logo_1.png) -20px -105px;
+	float:left;
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+}
+.wpGoods{
+	border:#999 1px solid;
+	margin-top:10px;
+	
+}
+
+.goods_1_1{
+	width:1070px;
+	height:80px;
+	margin:20px;
+}
+.goods_1_1 ul li{
+	float:left;
+}
+.allCheckbox,.goodsbox{
+	width:15px;
+	height:15px;
+	margin-right:10px;
+}
+.goods_title{
+	margin-left:10px;
+	margin-right:35px;
+	width:230px;
+}
+.goods_title img{
+	margin-top:28px;
+	margin-right:5px;
+}
+.price{
+	margin:0 70px;
+}
+.reduce,.add{
+	display:block;
+	float:left;
+	width:20px;
+	height:25px;
+	background:rgba(204,204,204,0.5);
+	text-align:center;
+	cursor:pointer;
+}
+.num{
+	display:block;
+	float:left;
+}
+.num input{
+	width:38px;
+	height:23px;
+	border:1px solid #999;
+	text-align:center;
+}
+.endPrice{
+	color:#F00;
+}
+.line{
+	border-bottom:1px solid #CCC;
+	height:1px;
+}
+.wpjiesuan{
+	width:1110px;
+	height:45px;
+	background:#CCC;
+	margin:auto;
+}
+.jiesuan_1{
+	line-height:45px;
+	float:right;
+}
+.jiesuan_2{
+	line-height:45px;
+	width:100px;
+	text-align:center;
+	background:#F90;
+	float:right;
+	font-size:24px;
+	color:#FFF;
+	margin-left:10px;
+}
+.jiesuanPrise{
+	color:#F00;
+	font-size:24px;
+}
+</style>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+$(function(){
+	//全选反选
+	$(".allCheckbox").click(function(){
+		if( $(this).is(":checked")){
+			$(".goodsbox").prop("checked",true);
+		}else{
+			$(".goodsbox").prop("checked",false);
+		}
+	});	
+	//
+	$(".goodsbox").click(function(){
+		var size=$(".goodsbox").size();
+		if( $(".goodsbox:checked").length==size){
+			$(".allCheckbox").prop("checked",true);
+		}else{
+			$(".allCheckbox").prop("checked",false);
+		}	
+	});
+	//
+	var num;
+	var price;
+	$(".add").click(function(){
+		num=$(this).prev().find("input").val();
+		num++;
+		$(this).prev().find("input").val(num);
+		
+		price=num*parseInt($(this).parent().prev().html().substring(1));
+		$(this).parent().next().html("￥"+price);
+			
+	});
+	
+	$(".reduce").click(function(){
+		num=$(this).next().find("input").val();
+		if(num>0){
+			num--;
+		}
+		$(this).next().find("input").val(num);	
+		price=num*parseInt($(this).parent().prev().html().substring(1));
+		$(this).parent().next().html("￥"+price);
+	});
+	
+
+	
+});
+</script>
+</head>
+
+<body>
+<div class="wp">
+   <div class="storyName">
+       <input type="checkbox" class="allCheckbox fl" id="all"/><div class="logo_1"></div><span>店铺：</span><a href="#">京天华盛官方旗舰</a>
+   </div>
+   <div class="wpGoods">
+     <!--第一个产品开始-->
+       <div class="goods_1" id="goods_1">
+           <div class="goods_1_1">
+               <ul>
+                   <li><input type="checkbox" class="goodsbox" name="goods" /></li>
+                   <li><img src="images/good.jpg" /></li>
+                   <li class="goods_title">
+                   <p><a href="#">京天i5 8400/GTX1050Ti吃鸡电脑主机台式机全套游戏组装机DIY整机</a></p>
+                       <div><img src="images/xcard.png" /><img src="images/goal.png"/><img src="images/server.png" /></div>
+                   </li>
+                   <li>
+                       <p>硬盘容量：配置二</p>
+                       <p>内存容量：8GB</p>
+                   </li>
+                   <li class="price" id="price_1">￥3988</li>
+                   <li>
+                      <span class="reduce">-</span>
+                      <span class="num"><input type="text" value="1" name="number" id="num_1"/></span>
+                      <span class="add">+</span>
+                   </li>
+                   <li class="price endPrice" id="sumprice_1" name="zj">￥3988</li>
+                   <li>
+                       <p><a href="#">移入收藏夹</a></p>
+                       <p><a href="#" class="delete">删除</a></p>
+                   </li>
+               </ul>
+           </div>
+       </div>
+       <div class="line"></div> 
+       <!--第二个产品开始-->
+       <div class="goods_1">
+           <div class="goods_1_1" id="goods_2">
+               <ul>
+                   <li><input type="checkbox"  class="goodsbox" name="goods"/></li>
+                   <li><img src="images/good.jpg" /></li>
+                   <li class="goods_title">
+                       <p><a href="#">京天i5 8400/GTX1050Ti吃鸡电脑主机台式机全套游戏组装机DIY整机</a></p>
+                       <div><img src="images/xcard.png" /><img src="images/goal.png"/><img src="images/server.png" /></div>
+                   </li>
+                   <li>
+                       <p>硬盘容量：配置二</p>
+                       <p>内存容量：8GB</p>
+                   </li>
+                   <li class="price" id="price_2">￥4000</li>
+                   <li>
+                      <span class="reduce">-</span>
+                      <span class="num"><input type="text" value="1" name="number" id="num_2" /></span>
+                      <span class="add">+</span>
+                   </li>
+                   <li class="price endPrice" id="sumprice_2"  name="zj">￥4000</li>
+                   <li>
+                       <p><a href="#">移入收藏夹</a></p>
+                       <p><a href="#" class="delete">删除</a></p>
+                   </li>
+               </ul>
+           </div>
+       </div>
+       <div class="line"></div>
+       <!--第三个产品开始-->
+       <div class="goods_1">
+           <div class="goods_1_1" id="goods_3">
+               <ul>
+                   <li><input type="checkbox" class="goodsbox" name="goods"/></li>
+                   <li><img src="images/good.jpg" /></li>
+                   <li class="goods_title">
+                       <p><a href="#">京天i5 8400/GTX1050Ti吃鸡电脑主机台式机全套游戏组装机DIY整机</a></p>
+                       <div><img src="images/xcard.png" /><img src="images/goal.png"/><img src="images/server.png" /></div>
+                   </li>
+                   <li>
+                       <p>硬盘容量：配置二</p>
+                       <p>内存容量：8GB</p>
+                   </li>
+                   <li class="price" id="price_3">￥3688</li>
+                   <li>
+                      <span class="reduce">-</span>
+                      <span class="num"><input type="text" value="1" name="number" id="num_3"/></span>
+                      <span class="add" >+</span>
+                   </li>
+                   <li class="price endPrice" id="sumprice_3"  name="zj">￥3600</li>
+                   <li>
+                       <p><a href="#">移入收藏夹</a></p>
+                       <p><a href="#" class="delete">删除</a></p>
+                   </li>
+               </ul>
+           </div>
+       </div>
+       <div class="line"></div>  
+       <!--第四个产品开始-->
+       <div class="goods_1">
+           <div class="goods_1_1" id="goods_4">
+               <ul>
+                   <li><input type="checkbox" class="goodsbox" name="goods"/></li>
+                   <li><img src="images/good.jpg" /></li>
+                   <li class="goods_title">
+                       <p><a href="#">京天i5 8400/GTX1050Ti吃鸡电脑主机台式机全套游戏组装机DIY整机</a></p>
+                       <div><img src="images/xcard.png" /><img src="images/goal.png"/><img src="images/server.png" /></div>
+                   </li>
+                   <li>
+                       <p>硬盘容量：配置二</p>
+                       <p>内存容量：8GB</p>
+                   </li>
+                   <li class="price" id="price_4">￥3788</li>
+                   <li>
+                      <span class="reduce">-</span>
+                      <span class="num"><input type="text" value="1" name="number" id="num_4"/></span>
+                      <span class="add">+</span>
+                   </li>
+                   <li class="price endPrice" id="sumprice_4"  name="zj">￥3788</li>
+                   <li>
+                       <p><a href="#">移入收藏夹</a></p>
+                       <p><a href="#" class="delete">删除</a></p>
+                   </li>
+               </ul>
+           </div>
+       </div>
+       <div class="line"></div> 
+  </div>   
+</div>
+<div class="wpjiesuan">
+    <div class="jiesuan_2">结算</div>
+    <div class="jiesuan_1"><span>合计（不含运费）：</span><span class="jiesuanPrise" id="jiesuanPrise_1">0.00</span></div>
+</div>
+</body>
+</html>

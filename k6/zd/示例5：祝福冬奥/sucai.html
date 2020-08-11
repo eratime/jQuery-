@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>仿冬奥列表内容</title>
+	 <link rel="stylesheet" href="css/games.css">
+ </head>
+ <body>
+	<div class="contain">
+		<h2>祝福冬奥</h2>
+		<ul class="gameList">
+			<li> 贝克汉姆：衷心希望北京能够申办成功！</li>
+			<li> 姚明：北京申冬奥是个非常棒的机会！加油！</li>
+			<li> 张虹：北京办冬奥，大家的热情定超乎想象！ </li>
+			<li> 肖恩怀特：我爱北京，支持北京申办冬奥会！</li>
+		</ul>
+	</div>
+	<script src="js/jquery-1.12.4.js"></script>
+    <script>
+    	$(function(){
+			$(".contain :header").css({"background":"#039","color":"#FFF"});
+		    /*var	$News=$("<li>文本文本</li>");
+			 var $News2=$("<li>文本文本文本</li>");
+			$("ul").append($News);			//内部，追加到后面
+			$("ul").prepend($News2);		//内部，追加到前面
+			
+			   var	$News3=$("<li>123文本文本</li>");
+			 var $News4=$("<li>文本文本文本</li>");
+			 
+			 $("ul").after($News3);			//外部，追加到后面
+			 $("ul").before($News4);		//外部，追加到前面
+			 
+			 $(".gameList li:eq(1)").remove();		//	删除
+			 $(".gameList li:eq(2)").empty();		// 清空文本*/
+			 
+			 $(".gameList li:eq(1)").click(function(){		
+				$(this).clone(true).appendTo(".gameList");		//克隆，true表示克隆后的克隆的也能克隆 
+			})
+			$(".gameList li:eq(2)").click(function(){
+				$(this).clone(false).appendTo(".gameList");		//克隆，false表示克隆后的克隆不能克隆
+			})
+			 
+			 $(".gameList li:last").css("border","none");
+		})
+    
+    </script>
+ </body>
+</html>

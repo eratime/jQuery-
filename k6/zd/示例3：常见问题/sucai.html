@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>常见问题</title>
+    <link rel="stylesheet" href="css/problem.css">
+</head>
+<body>
+<section>
+    <span>×</span>
+    <h1>常见问题</h1>
+    <div class="proList">
+    </div>
+<div class="img"><img src="images/boy.png"></div>
+</section>
+<script src="js/jquery-1.12.4.js" ></script>
+<script>
+	$(function(){
+		$("h1").click(function(){
+			var	str="<ul><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li><li>文本文本文本文本</li></ul>"; 
+			$(".proList").html(str);
+			});
+		$("span").click(function(){
+			$(".proList").html("");
+			
+			});	
+		
+		
+		});
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+}
+a{
+	color:#FFF;
+	text-decoration:none;
+}
+
+	
+ul{
+	list-style:none;
+}
+.wrap{
+	width:200px;
+	margin:10px 0 0 10px;
+}
+.topmenu{
+	height:45px;
+	background:#900;
+	line-height:45px;
+	color:#FFF;
+	padding-left:10px;
+	cursor:pointer;
+}
+.menu{
+	height:250px;
+}
+.menu ul{
+	background:#F00;
+}
+.menu ul li{
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	position:relative;
+}
+
+.menu div{
+	border:2px solid #F00;
+	position:absolute;
+	left:200px;
+	top:0;
+	display:none;
+
+}
+.menu ul li:hover {
+	background-color: #FC6;
+}
+</style>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(document).ready(function() {
+        $("li").mouseover(function(){
+			$(this).css("background","#CC0");
+			//$(this).find("div").show();
+			$(this).children("div").css("display","block");
+		});
+        $("li").mouseout(function(){
+			$(this).css("background","#F00");
+			//$(this).find("div").hide();
+			$(this).children("div").css("display","none");
+		});		
+    });
+</script>
+</head>
+
+<body>
+    <div  class="wrap">
+    	<div class="topmenu">全部商品分类</div>
+        <div class="menu">
+        	<ul>
+            	<li><a href="#">家用电器</a><div><img src="images/caidan.jpg" width="1001" height="481"></div></li>
+                <li><a href="#">手机、数码、京东通信</a><div><img src="images/menu_2.jpg" width="995" height="478"></div></li>
+                <li><a href="#">电脑、办公</a><div><img src="images/menu_3.jpg" width="990" height="472"></div></li>
+                <li><a href="#">家居、家具、家装、厨具</a><div><img src="images/menu_4.jpg" width="984" height="475"></div></li>
+            </ul>       
+        </div>  
+    </div>
+</body>
+</html>

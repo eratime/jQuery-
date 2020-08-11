@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script language="javascript">
+function SetTableColor() {
+  var tbl = document.getElementById("tblMain");
+  var trs = tbl.getElementsByTagName("tr");
+  for (var i = 0; i < trs.length; i++) {
+ var j = i + 1;
+ if (j % 2 == 0) { //偶数行
+   trs[i].style.background = "yellow";
+ }
+ else {
+   trs[i].style.background = "blue";
+ }
+  }
+}
+
+</script>
+</head>
+
+<body onload="SetTableColor()">
+<table width="200" border="1" id="tblMain">
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

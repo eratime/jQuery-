@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+.wp {
+	height: 313px;
+	width: 500px;
+	position: relative;
+}
+.xx {
+	height: 50px;
+	width: 500px;
+	background-color:rgba(0,0,0,0.5);
+	color: #CCC;
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	line-height: 50px;
+	display: none;
+}
+</style>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+$(function(){
+	$(".wp").mouseenter(function(){
+		$(".xx").slideDown();	
+	});	
+	$(".xx").mouseleave(function(){
+		$(".xx").slideUp();
+	});
+})
+</script>
+</head>
+
+<body>
+<div class="wp">
+	<img src="images/u=526705570,3622992982&fm=26&gp=0.jpg" width="500" height="313">
+	<div class="xx">宫殿</div>
+</div>
+</body>
+</html>

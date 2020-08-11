@@ -1,0 +1,120 @@
+@charset "utf-8";
+.top {
+	background-image: url(../images/dangdang_top.png);
+	background-repeat: no-repeat;
+	height: 334px;
+	width: 1862px;
+	margin-right: auto;
+	margin-left: auto;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+.nr {
+	background-image: url(../images/dangdang_nr.png);
+	height: 7813px;
+	width: 1862px;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+}
+.nav {
+	height: 42px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.nav_box {
+	height: 42px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #ff2832;
+	width: 100%;
+	background-color: #FFF;
+}
+.zhiding span {
+	background-image: url(../images/zhiding.png);
+	background-repeat: no-repeat;
+	height: 34px;
+	width: 33px;
+	display: block;
+	float: right;
+}
+.zhiding p {
+	font-size: 12px;
+	line-height: 34px;
+	font-weight: bolder;
+	color: #FFF;
+	height: 34px;
+	background-color: #474747;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-left: 10px;
+	display: none;
+}
+
+.zhiding {
+	height: 34px;
+	width: 100px;
+	position: fixed;
+	right: 200px;
+	bottom: 100px;
+	display: none;
+}
+
+
+.nav_box .nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.nav_box .nav ul div {
+	cursor: pointer;
+	height: 42px;
+	line-height: 42px;
+	width: 180px;
+	background-color: #ff2832;
+	color: #FFF;
+	font-family: "黑体";
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+	float: left;
+	margin-right: 20px;
+}
+.nav ul li a {
+	display: block;
+	height: 42px;
+	width: 70px;
+	text-align: center;
+	line-height: 42px;
+	text-decoration: none;
+	color: #333;
+	font-family: "合同";
+	font-size: 14px;
+	font-weight: bolder;
+}
+.nav ul li a:hover {
+	color: #ff2832;
+}
+
+
+.nav_box .nav ul div span {
+	padding-left: 40px;
+	line-height: 42px;
+}
+.nav ul li {
+	float: left;
+}
+.nav-fixed{
+	position: fixed;
+	top: 0;
+	opacity: 0.9;
+}
+

@@ -1,0 +1,150 @@
+@charset "utf-8";
+.fl{
+	float:left;
+}
+.fr{float:right;
+}
+.denglu {
+	float: right;
+	margin-right: 200px;
+	cursor:pointer;
+}
+.denglu a:hover {
+	color: #39F;
+	text-decoration: none;
+}
+.denglu a {
+	color: #333;
+	text-decoration: none;
+}
+
+
+.dl .logo {
+	background-image: url(../images/baidu2.jpg);
+	height: 60px;
+	width: 321px;
+	clear: both;
+}
+.dl {
+	width: 321px;
+	clear: both;
+	font-size: 12px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #FFF;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	height: 356px;
+	display:none;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.dl div form #dl {
+	height: 40px;
+	width: 250px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	background-color: #3f89ec;
+	color: #FFF;
+	font-size: 18px;
+	font-weight: bolder;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	cursor:pointer;
+}
+
+.dl div form #Uesrname {
+	height: 40px;
+	width: 250px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+.dl div form #pass {
+	height: 40px;
+	width: 250px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+.dl div form #zidong {
+	margin-left: 20px;
+}
+
+
+
+.dl .break {
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	float: right;
+	cursor: pointer;
+	font-size: 20px;
+}
+.dl div form .kuaijie {
+	height: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.dl div form .foot {
+	background-color: #f0f6ff;
+	height: 30px;
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.dl div form .foot span {
+	margin-right: 10px;
+	margin-left: 10px;
+	color: #3f89ec;
+}
+.bg {
+	background-color:#000;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity:0.5;
+	display:none;
+}
+
+
+.dl div form .foot a {
+	font-size: 18px;
+	color: #3f89ec;
+	text-decoration: none;
+	font-family: "黑体";
+}
+.dl div form .kuaijie a {
+	color: #3f89ec;
+	text-decoration: none;
+}
+.dl div form .kuaijie a:hover {
+	color: #a9c8f3;
+}
+.dl div form .foot a:hover {
+	color: #a9c8f3;
+}
+
+
+
+
+
+.dl div form .kuaijie span {
+	float: right;
+}
+
+
+.dl .break:hover {
+	font-weight: bolder;
+	font-size: 24px;	
+	
+}
